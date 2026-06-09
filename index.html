@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KASHIKALYANI TRADE PRIVATE LIMITED | Premium UI/UX Design & Digital Experiences</title>
+    <meta name="description" content="KASHIKALYANI TRADE PRIVATE LIMITED specialises in UI/UX design, premium website development, and digital brand building based in the United Kingdom.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a', // Slate 900
+                        secondary: '#1e293b', // Slate 800
+                        accent: '#8b5cf6', // Violet 500
+                        highlight: '#06b6d4', // Cyan 500
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #8b5cf6, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+
+        /* Image Hover Zoom */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 0.5s ease;
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased font-sans">
+
+    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 cursor-pointer">
+                        <span class="text-2xl font-bold tracking-tighter text-white">KASHIKALYANI TRADE</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-accent transition px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#services" class="hover:text-accent transition px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#portfolio" class="hover:text-accent transition px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                        <a href="#about" class="hover:text-accent transition px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#contact" class="bg-gradient-to-r from-violet-600 to-cyan-500 hover:opacity-90 text-white px-5 py-2 rounded-full text-sm font-medium transition transform hover:-translate-y-0.5">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden md:hidden bg-secondary border-b border-gray-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Portfolio</a>
+                <a href="#contact" class="text-accent font-bold block px-3 py-2 rounded-md text-base">Get in Touch</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-violet-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div class="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div data-aos="fade-up" class="inline-block px-4 py-1 mb-6 rounded-full border border-gray-700 bg-gray-800/50 backdrop-blur-sm">
+                    <span class="text-sm font-medium text-gray-300">KASHIKALYANI TRADE PRIVATE LIMITED</span>
+                </div>
+                <h1 data-aos="fade-up" data-aos-delay="50" class="text-6xl md:text-8xl font-bold tracking-tight mb-4 gradient-text">
+                    KASHIKALYANI TRADE PRIVATE LIMITED
+                </h1>
+                <h2 data-aos="fade-up" data-aos-delay="100" class="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-white">
+                    Designing <br>
+                    <span class="text-gradient">Tomorrow's Digital Experiences</span>
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="200" class="mt-4 max-w-2xl mx-auto text-xl text-gray-400">
+                    We don't just write code—we transform complex business logic into elegant, intuitive interfaces through exceptional UI/UX design thinking, breathing digital life into your brand.
+                </p>
+                <div data-aos="fade-up" data-aos-delay="300" class="mt-10 flex justify-center gap-4">
+                    <a href="#contact" class="px-8 py-4 rounded-full bg-white text-gray-900 font-bold hover:bg-gray-200 transition">
+                        Start Your Project
+                    </a>
+                    <a href="#portfolio" class="px-8 py-4 rounded-full border border-gray-600 text-white font-medium hover:border-gray-400 transition">
+                        View Portfolio
+                    </a>
+                </div>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="500" class="mt-16 relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+                <img src="https://picsum.photos/seed/techhero/1600/800" alt="Dashboard Design" class="w-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-10 border-y border-gray-800 bg-secondary/30">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-center text-sm text-gray-500 mb-6 tracking-widest uppercase">Our design philosophy empowers businesses across industries</p>
+            <div class="flex justify-between items-center opacity-60 grayscale hover:grayscale-0 transition-all duration-500 flex-wrap gap-8">
+                <i class="fab fa-aws text-4xl"></i>
+                <i class="fab fa-google text-4xl"></i>
+                <i class="fab fa-airbnb text-4xl"></i>
+                <i class="fab fa-spotify text-4xl"></i>
+                <i class="fab fa-stripe text-4xl"></i>
+                <i class="fab fa-react text-4xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Based in the UK, <span class="text-cyan-400">Serving Globally</span></h2>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-6">
+                        KASHIKALYANI TRADE PRIVATE LIMITED is more than a tech agency—we're a creative laboratory. Headquartered in the United Kingdom, we bring international design standards to every project. We believe great design shouldn't just look beautiful—it must work flawlessly.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        From our UK base, we help businesses across Europe and beyond elevate their brand value through exceptional interface design, optimising user engagement and driving measurable conversion improvements.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <img src="https://picsum.photos/seed/office1/400/500" class="rounded-lg w-full h-64 object-cover mb-8" alt="Office">
+                    <img src="https://picsum.photos/seed/meeting/400/500" class="rounded-lg w-full h-64 object-cover mt-8" alt="Meeting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div data-aos="zoom-in" data-aos-delay="0">
+                    <div class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">8+</div>
+                    <div class="mt-2 text-gray-400 text-sm">Years of Experience</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="100">
+                    <div class="text-4xl font-bold text-white">250+</div>
+                    <div class="mt-2 text-gray-400 text-sm">Projects Delivered</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="200">
+                    <div class="text-4xl font-bold text-white">98%</div>
+                    <div class="mt-2 text-gray-400 text-sm">Client Satisfaction</div>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="300">
+                    <div class="text-4xl font-bold text-white">24/7</div>
+                    <div class="mt-2 text-gray-400 text-sm">Technical Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white">Core Services</h2>
+                <p class="mt-4 text-gray-400">Where business objectives meet user needs</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div data-aos="fade-up" class="group p-8 rounded-2xl bg-secondary hover:bg-gray-800 transition duration-300 border border-gray-700 hover:border-accent">
+                    <div class="w-14 h-14 rounded-lg bg-violet-900/50 flex items-center justify-center mb-6 group-hover:bg-violet-600 transition">
+                        <i class="fas fa-layer-group text-2xl text-violet-300 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">UI/UX Design</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        User psychology-driven design that balances aesthetics with usability and conversion optimisation. Including mobile app interfaces, web applications, and enterprise SaaS dashboards.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="group p-8 rounded-2xl bg-secondary hover:bg-gray-800 transition duration-300 border border-gray-700 hover:border-cyan-500">
+                    <div class="w-14 h-14 rounded-lg bg-cyan-900/50 flex items-center justify-center mb-6 group-hover:bg-cyan-600 transition">
+                        <i class="fas fa-code text-2xl text-cyan-300 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Frontend & Full-Stack Development</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Pixel-perfect implementation using modern frameworks like Vue.js, React, and Next.js. Responsive layouts optimised for all devices and screen sizes.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="group p-8 rounded-2xl bg-secondary hover:bg-gray-800 transition duration-300 border border-gray-700 hover:border-pink-500">
+                    <div class="w-14 h-14 rounded-lg bg-pink-900/50 flex items-center justify-center mb-6 group-hover:bg-pink-600 transition">
+                        <i class="fas fa-mobile-alt text-2xl text-pink-300 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Mobile Solutions</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Native iOS/Android development or cross-platform solutions using Flutter and React Native—delivering seamless mobile experiences that captivate users and drive engagement.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="group p-8 rounded-2xl bg-secondary hover:bg-gray-800 transition duration-300 border border-gray-700 hover:border-yellow-500">
+                    <div class="w-14 h-14 rounded-lg bg-yellow-900/50 flex items-center justify-center mb-6 group-hover:bg-yellow-600 transition">
+                        <i class="fas fa-paint-brush text-2xl text-yellow-300 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Brand Identity Design</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Comprehensive brand identity systems including logo design, colour palettes, typography selection, and brand guidelines—ensuring consistency across all touchpoints.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400" class="group p-8 rounded-2xl bg-secondary hover:bg-gray-800 transition duration-300 border border-gray-700 hover:border-green-500">
+                    <div class="w-14 h-14 rounded-lg bg-green-900/50 flex items-center justify-center mb-6 group-hover:bg-green-600 transition">
+                        <i class="fas fa-chart-line text-2xl text-green-300 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Conversion Optimisation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Data-driven UX audits and A/B testing programmes to identify friction points, improve user journeys, and maximise conversion rates across your digital products.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="500" class="group p-8 rounded-2xl bg-secondary hover:bg-gray-800 transition duration-300 border border-gray-700 hover:border-red-500">
+                    <div class="w-14 h-14 rounded-lg bg-red-900/50 flex items-center justify-center mb-6 group-hover:bg-red-600 transition">
+                        <i class="fas fa-cubes text-2xl text-red-300 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Design Systems</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Scalable component libraries and UI pattern frameworks that maintain visual consistency whilst accelerating development velocity across your product teams.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 relative" data-aos="fade-right">
+                    <div class="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 transform skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl opacity-20"></div>
+                    <img src="https://picsum.photos/seed/research/600/400" alt="User Research" class="relative rounded-2xl shadow-2xl border border-gray-700 w-full">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <h3 class="text-sm font-bold text-accent uppercase tracking-wider mb-2">Deep Insights</h3>
+                    <h2 class="text-3xl font-bold text-white mb-4">Research-Led Design Process</h2>
+                    <p class="text-gray-400 mb-6">
+                        We don't design by guesswork. Before putting pen to paper, we conduct thorough competitor analysis, user persona development, and pain point mapping. Every button placement, every colour choice is backed by evidence and user data.
+                    </p>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i> Interactive prototype testing</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i> A/B testing programmes</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i> Data-driven iteration cycles</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-400 mr-3"></i> Usability benchmarking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12">
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <img src="https://picsum.photos/seed/designsystem/600/400" alt="Design System" class="rounded-2xl shadow-2xl border border-gray-700 w-full">
+                </div>
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h3 class="text-sm font-bold text-cyan-400 uppercase tracking-wider mb-2">Systematic Thinking</h3>
+                    <h2 class="text-3xl font-bold text-white mb-4">Scalable Design Systems</h2>
+                    <p class="text-gray-400 mb-6">
+                        For long-term projects, we build comprehensive UI specification libraries. Unified colour palettes, typography scales, spacing systems, and reusable component libraries—ensuring visual consistency throughout rapid iteration whilst dramatically reducing development communication overhead.
+                    </p>
+                    <a href="#" class="text-white border-b border-accent hover:text-accent transition pb-1">Explore our design system methodology →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-secondary/50">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Our Workflow</h2>
+            <div class="relative">
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-700 -translate-y-1/2 z-0"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                    <div data-aos="fade-up" data-aos-delay="0">
+                        <div class="w-16 h-16 mx-auto bg-primary border-2 border-accent rounded-full flex items-center justify-center text-xl font-bold text-white mb-4">01</div>
+                        <h3 class="text-lg font-bold text-white">Discovery</h3>
+                        <p class="text-gray-400 text-sm mt-2">Define objectives and core pain points</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-16 h-16 mx-auto bg-primary border-2 border-cyan-500 rounded-full flex items-center justify-center text-xl font-bold text-white mb-4">02</div>
+                        <h3 class="text-lg font-bold text-white">Strategy</h3>
+                        <p class="text-gray-400 text-sm mt-2">Information architecture and user flows</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="w-16 h-16 mx-auto bg-primary border-2 border-purple-500 rounded-full flex items-center justify-center text-xl font-bold text-white mb-4">03</div>
+                        <h3 class="text-lg font-bold text-white">Visual Design</h3>
+                        <p class="text-gray-400 text-sm mt-2">High-fidelity UI and motion design</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <div class="w-16 h-16 mx-auto bg-primary border-2 border-green-500 rounded-full flex items-center justify-center text-xl font-bold text-white mb-4">04</div>
+                        <h3 class="text-lg font-bold text-white">Launch</h3>
+                        <p class="text-gray-400 text-sm mt-2">Development, testing, and deployment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-white">Selected Work</h2>
+                    <p class="text-gray-400 mt-2">Click to view full project details</p>
+                </div>
+                <a href="#" class="hidden md:block text-accent hover:text-white transition">View All Projects <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div data-aos="fade-up" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/app1/600/400" alt="Project 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-cyan-400 text-xs font-bold uppercase">FinTech App</span>
+                        <h3 class="text-white text-xl font-bold">Wealth Management Platform</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/web2/600/400" alt="Project 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-purple-400 text-xs font-bold uppercase">E-Commerce</span>
+                        <h3 class="text-white text-xl font-bold">Luxury Fashion E-Commerce</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/dash3/600/400" alt="Project 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-green-400 text-xs font-bold uppercase">SaaS Dashboard</span>
+                        <h3 class="text-white text-xl font-bold">Logistics Analytics Dashboard</h3>
+                    </div>
+                </div>
+                 <div data-aos="fade-up" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/medical/600/400" alt="Project 4" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-red-400 text-xs font-bold uppercase">Healthcare</span>
+                        <h3 class="text-white text-xl font-bold">NHS Telemedicine Platform</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/travel/600/400" alt="Project 5" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-yellow-400 text-xs font-bold uppercase">Travel</span>
+                        <h3 class="text-white text-xl font-bold">European Travel Companion</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/corp/600/400" alt="Project 6" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-blue-400 text-xs font-bold uppercase">Corporate</span>
+                        <h3 class="text-white text-xl font-bold">FTSE 100 Corporate Rebrand</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-up" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/edu/600/400" alt="Project 7" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-indigo-400 text-xs font-bold uppercase">Education</span>
+                        <h3 class="text-white text-xl font-bold">E-Learning Platform Redesign</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/prop/600/400" alt="Project 8" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-emerald-400 text-xs font-bold uppercase">Property</span>
+                        <h3 class="text-white text-xl font-bold">Property Management Portal</h3>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="group relative rounded-xl overflow-hidden img-zoom-container cursor-pointer">
+                    <img src="https://picsum.photos/seed/food/600/400" alt="Project 9" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                        <span class="text-rose-400 text-xs font-bold uppercase">Food & Beverage</span>
+                        <h3 class="text-white text-xl font-bold">Restaurant Chain Digital Experience</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative py-32 bg-fixed bg-center bg-cover" style="background-image: url('https://picsum.photos/seed/darkbg/1920/1080');">
+        <div class="absolute inset-0 bg-primary/80"></div>
+        <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Elevate Your Brand?</h2>
+            <p class="text-xl text-gray-300 mb-8">Great design sells silently. Let our professional design language speak for your product.</p>
+            <a href="#contact" class="inline-block bg-accent hover:bg-violet-600 text-white font-bold py-3 px-8 rounded-full transition shadow-lg shadow-violet-500/30">
+                Get a Free Quote
+            </a>
+        </div>
+    </section>
+
+    <section class="py-24 bg-secondary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div data-aos="fade-up" class="bg-primary p-8 rounded-xl border border-gray-800 relative">
+                    <i class="fas fa-quote-left text-4xl text-gray-700 absolute top-4 left-4"></i>
+                    <p class="text-gray-300 mt-8 mb-6 italic">"Exceptionally professional team. They not only perfectly executed our designs but also proactively suggested UX improvements we hadn't considered. Our app's user retention rate improved by 20% post-launch."</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/seed/face1/100/100" class="w-10 h-10 rounded-full mr-4" alt="Client">
+                        <div>
+                            <h4 class="text-white font-bold text-sm">James Robertson</h4>
+                            <p class="text-gray-500 text-xs">CEO, TechVentures Ltd</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="bg-primary p-8 rounded-xl border border-gray-800 relative">
+                    <i class="fas fa-quote-left text-4xl text-gray-700 absolute top-4 left-4"></i>
+                    <p class="text-gray-300 mt-8 mb-6 italic">"Brilliant communication throughout the project. Lightning-fast response times. Finding a team with this level of aesthetic sensibility and technical expertise is rare. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/seed/face2/100/100" class="w-10 h-10 rounded-full mr-4" alt="Client">
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Charlotte Williams</h4>
+                            <p class="text-gray-500 text-xs">Brand Director, Luxe Fashion</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="bg-primary p-8 rounded-xl border border-gray-800 relative">
+                    <i class="fas fa-quote-left text-400 text-gray-700 absolute top-4 left-4"></i>
+                    <p class="text-gray-300 mt-8 mb-6 italic">"The UI design has a truly international feel—it completely transformed how clients perceive our company. The entire collaboration was seamless and thoroughly enjoyable."</p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/seed/face3/100/100" class="w-10 h-10 rounded-full mr-4" alt="Client">
+                        <div>
+                            <h4 class="text-white font-bold text-sm">David Chen</h4>
+                            <p class="text-gray-500 text-xs">Operations Director, Global Logistics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-lg text-gray-400 mb-8">Our Technology Stack & Tools</h3>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16">
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-figma text-4xl text-gray-500 group-hover:text-purple-400 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">Figma</span>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-sketch text-4xl text-gray-500 group-hover:text-yellow-400 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">Sketch</span>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-html5 text-4xl text-gray-500 group-hover:text-orange-500 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">HTML5</span>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-css3-alt text-4xl text-gray-500 group-hover:text-blue-500 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">CSS3</span>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-js text-4xl text-gray-500 group-hover:text-yellow-400 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">JavaScript</span>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-vuejs text-4xl text-gray-500 group-hover:text-green-500 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">Vue.js</span>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-react text-4xl text-gray-500 group-hover:text-cyan-400 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">React</span>
+                </div>
+                <div class="flex flex-col items-center group">
+                    <i class="fab fa-sass text-4xl text-gray-500 group-hover:text-pink-400 transition mb-2"></i>
+                    <span class="text-xs text-gray-600">Sass</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6">Why Choose <span class="text-gradient">KASHIKALYANI TRADE PRIVATE LIMITED</span>?</h2>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-white">Rapid Delivery</h4>
+                                <p class="text-gray-400 text-sm">Mature development frameworks and component libraries that reduce development cycles by 30%.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                                <i class="fas fa-search-dollar"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-white">Exceptional Value</h4>
+                                <p class="text-gray-400 text-sm">London-quality design standards at competitive UK market rates.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-white">Peace of Mind</h4>
+                                <p class="text-gray-400 text-sm">Comprehensive 12-month complimentary technical maintenance and bug fix warranty.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 h-10 w-10 rounded-full bg-accent/20 flex items-center justify-center text-accent">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-bold text-white">Dedicated Support</h4>
+                                <p class="text-gray-400 text-sm">Assigned project manager and direct Slack channel for real-time communication.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="zoom-in">
+                    <img src="https://picsum.photos/seed/teamwork/600/500" alt="Team Work" class="rounded-2xl shadow-2xl border border-gray-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-secondary/30">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Meet the Team</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div data-aos="flip-left" class="bg-primary p-6 rounded-xl border border-gray-800 hover:border-accent transition">
+                    <img src="https://picsum.photos/seed/m1/200/200" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-accent" alt="Member">
+                    <h3 class="text-white font-bold">Alex Morrison</h3>
+                    <p class="text-accent text-sm mb-3">Design Director</p>
+                    <p class="text-gray-500 text-xs">10 years UX design experience. Former lead designer at top London agency.</p>
+                </div>
+                <div data-aos="flip-left" data-aos-delay="100" class="bg-primary p-6 rounded-xl border border-gray-800 hover:border-accent transition">
+                    <img src="https://picsum.photos/seed/m2/200/200" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-cyan-500" alt="Member">
+                    <h3 class="text-white font-bold">Sarah Bennett</h3>
+                    <p class="text-cyan-500 text-sm mb-3">Frontend Lead</p>
+                    <p class="text-gray-500 text-xs">Vue.js/React ecosystem contributor. Passionate about clean, performant code.</p>
+                </div>
+                <div data-aos="flip-left" data-aos-delay="200" class="bg-primary p-6 rounded-xl border border-gray-800 hover:border-accent transition">
+                    <img src="https://picsum.photos/seed/m3/200/200" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-purple-500" alt="Member">
+                    <h3 class="text-white font-bold">James Mitchell</h3>
+                    <p class="text-purple-500 text-sm mb-3">Backend Architect</p>
+                    <p class="text-gray-500 text-xs">Specialises in high-concurrency systems architecture and data security.</p>
+                </div>
+                 <div data-aos="flip-left" data-aos-delay="300" class="bg-primary p-6 rounded-xl border border-gray-800 hover:border-accent transition">
+                    <img src="https://picsum.photos/seed/m4/200/200" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-pink-500" alt="Member">
+                    <h3 class="text-white font-bold">Emma Thompson</h3>
+                    <p class="text-pink-500 text-sm mb-3">Product Manager</p>
+                    <p class="text-gray-500 text-xs">Expert at translating client vision into actionable project requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Transparent Pricing</h2>
+            <p class="text-gray-400 mb-12">Clear pricing, flexible customisation</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-700 flex flex-col">
+                    <h3 class="text-xl font-bold text-white mb-2">Business Website</h3>
+                    <div class="text-3xl font-bold text-white mb-6">£2,999<span class="text-sm text-gray-500 font-normal"> starting</span></div>
+                    <ul class="text-gray-400 text-left space-y-4 mb-8 flex-1">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Responsive corporate website</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 5-8 custom pages</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Basic SEO optimisation</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 12-month technical support</li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 border border-gray-500 text-white rounded-lg hover:border-white transition">Enquire Now</a>
+                </div>
+                <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-8 rounded-2xl border-2 border-accent transform scale-105 shadow-2xl relative flex flex-col">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent text-white px-4 py-1 rounded-full text-xs font-bold uppercase">Recommended</div>
+                    <h3 class="text-xl font-bold text-white mb-2">Brand Custom</h3>
+                    <div class="text-3xl font-bold text-white mb-6">£6,999<span class="text-sm text-gray-500 font-normal"> starting</span></div>
+                    <ul class="text-gray-400 text-left space-y-4 mb-8 flex-1">
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Bespoke UI design</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Advanced animations & interactions</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> CMS backend integration</li>
+                        <li class="flex items-center"><i class="fas fa-check text-accent mr-2"></i> Performance optimisation</li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 bg-accent text-white rounded-lg hover:bg-violet-600 transition">Enquire Now</a>
+                </div>
+                <div class="bg-secondary p-8 rounded-2xl border border-gray-700 flex flex-col">
+                    <h3 class="text-xl font-bold text-white mb-2">Enterprise Application</h3>
+                    <div class="text-3xl font-bold text-white mb-6">Bespoke<span class="text-sm text-gray-500 font-normal"> / Custom</span></div>
+                    <ul class="text-gray-400 text-left space-y-4 mb-8 flex-1">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Mobile app / complex web app</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Advanced business logic systems</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Cloud architecture & deployment</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Dedicated project manager</li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 border border-gray-500 text-white rounded-lg hover:border-white transition">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-secondary/20">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Frequently Asked Questions</h2>
+            <div class="space-y-4">
+                <div class="border-b border-gray-700 pb-4">
+                    <h3 class="text-lg font-medium text-white mb-2">How long does a typical project take?</h3>
+                    <p class="text-gray-400 text-sm">Business websites typically take 2-3 weeks from brief to launch. Custom development projects vary by complexity but generally range from 4-8 weeks.</p>
+                </div>
+                 <div class="border-b border-gray-700 pb-4">
+                    <h3 class="text-lg font-medium text-white mb-2">What if I'm not satisfied with the design?</h3>
+                    <p class="text-gray-400 text-sm">We work iteratively with you at every stage (wireframes, UI concepts). We include three rounds of comprehensive revisions in our standard package to ensure your complete satisfaction.</p>
+                </div>
+                 <div class="border-b border-gray-700 pb-4">
+                    <h3 class="text-lg font-medium text-white mb-2">Do you provide source code and design files?</h3>
+                    <p class="text-gray-400 text-sm">Absolutely. Upon final payment, we transfer all design source files (Figma/Sketch) along with complete frontend and backend source code repositories.</p>
+                </div>
+                <div class="border-b border-gray-700 pb-4">
+                    <h3 class="text-lg font-medium text-white mb-2">Do you offer ongoing maintenance?</h3>
+                    <p class="text-gray-400 text-sm">Yes, all projects include 12 months of complimentary technical support. We also offer flexible retainer packages for ongoing updates and feature development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-10">Industry Insights & Perspectives</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="#" class="group block">
+                    <div class="overflow-hidden rounded-xl mb-4">
+                        <img src="https://picsum.photos/seed/news1/600/350" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500" alt="News">
+                    </div>
+                    <span class="text-xs text-accent font-bold">Trends</span>
+                    <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition">5 UI Design Trends Dominating 2025</h3>
+                    <p class="text-gray-500 text-sm mt-2">From glassmorphism evolution to AI-generated design systems, exploring what's next...</p>
+                </a>
+                <a href="#" class="group block">
+                    <div class="overflow-hidden rounded-xl mb-4">
+                        <img src="https://picsum.photos/seed/news2/600/350" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500" alt="News">
+                    </div>
+                    <span class="text-xs text-accent font-bold">Technology</span>
+                    <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition">Mastering Tailwind CSS for Rapid Development</h3>
+                    <p class="text-gray-500 text-sm mt-2">How utility-first CSS is transforming frontend workflows and boosting team productivity...</p>
+                </a>
+                <a href="#" class="group block">
+                    <div class="overflow-hidden rounded-xl mb-4">
+                        <img src="https://picsum.photos/seed/news3/600/350" class="w-full h-48 object-cover transform group-hover:scale-110 transition duration-500" alt="News">
+                    </div>
+                    <span class="text-xs text-accent font-bold">Case Study</span>
+                    <h3 class="text-lg font-bold text-white mt-2 group-hover:text-cyan-400 transition">How UK Retailers Are Winning Through Digital Transformation</h3>
+                    <p class="text-gray-500 text-sm mt-2">Real stories of British businesses that achieved remarkable growth through strategic digital investment...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gradient-to-br from-secondary to-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl font-bold text-white mb-6">Get in Touch</h2>
+                    <p class="text-gray-400 mb-8 text-lg">Have a project in mind? Or just want to chat about design? We'd love to hear from you.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-accent text-xl">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-white font-bold">Office Address</h4>
+                                <p class="text-gray-400">201, Surya Kiran Buidling, Bhaji Market, B.p. Road Bhayander East</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-accent text-xl">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-white font-bold">Email</h4>
+                                <p class="text-gray-400"><a href="mailto:contact@kashikalyanitrade.asia" class="hover:text-white">contact@kashikalyanitrade.asia</a></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center text-accent text-xl">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h4 class="text-white font-bold">Phone</h4>
+                                <p class="text-gray-400">7995805759</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div data-aos="fade-left" class="bg-gray-800/50 p-8 rounded-2xl border border-gray-700 backdrop-blur-sm">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                                <input type="text" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition" placeholder="How should we address you?">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-400 mb-2">Phone Number</label>
+                                <input type="tel" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition" placeholder="Your contact number">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                            <input type="email" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition" placeholder="you@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-400 mb-2">Project Brief</label>
+                            <textarea rows="4" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent transition" placeholder="Tell us about your project requirements..."></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-bold py-4 rounded-lg hover:shadow-lg hover:shadow-purple-500/30 transition transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-gray-900 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="text-2xl font-bold text-white tracking-tighter">KASHIKALYANI TRADE</span>
+                    <p class="text-gray-500 mt-4 max-w-sm">
+                        KASHIKALYANI TRADE PRIVATE LIMITED delivers premium digital solutions for forward-thinking businesses. From concept to launch, we pursue excellence in every pixel.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#home" class="hover:text-accent transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-accent transition">Services</a></li>
+                        <li><a href="#portfolio" class="hover:text-accent transition">Portfolio</a></li>
+                        <li><a href="#about" class="hover:text-accent transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white transition"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-900 pt-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm">
+                <p>&copy; 2025 KASHIKALYANI TRADE PRIVATE LIMITED All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Design & Development by KASHIKALYANI TRADE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-cubic'
+        });
+
+        // Sticky Navbar effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.replace('bg-transparent', 'bg-secondary/90'); 
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
